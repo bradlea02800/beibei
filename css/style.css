@@ -1,0 +1,260 @@
+/* 一一班 */
+@font-face {
+  font-family: "Bogart-Semibold";
+  src: url("https://assets.codepen.io/383755/bogart-semibold.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  scroll-behavior: smooth;
+  background: #ffffff;
+  cursor: none;
+  font-family: "Lexend Mega", sans-serif;
+  pointer-events: none;
+  transition-delay: 2s;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+/* 仔入畫面 */
+
+body #loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eeece5;
+  position: fixed;
+  box-sizing: border-box;
+  width: calc(100vw - 5px);
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: transform 0.6s cubic-bezier(1, 0.885, 0.32, 1);
+  transition-delay: 1.25s;
+  transform-origin: bottom;
+  background: #c6f040;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+body #loader:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 75%;
+  top: -75%;
+  background: #a59f25;
+  -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+body #loader .wrap {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  -webkit-animation: rotate 5s linear infinite;
+  animation: rotate 5s linear infinite;
+  transition: opacity 0.4s ease-in-out,
+    -webkit-animation-play-state 2s ease-in-out;
+  transition: opacity 0.4s ease-in-out, animation-play-state 2s ease-in-out;
+  transition: opacity 0.4s ease-in-out, animation-play-state 2s ease-in-out,
+    -webkit-animation-play-state 2s ease-in-out;
+  transition-delay: 0s, 0.4s;
+}
+body #loader .wrap span {
+  color: #fff;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  font-size: 12px;
+  transform-origin: 50% 40px;
+  top: -34px;
+  -webkit-animation: popping 0.25s ease-in-out infinite alternate;
+  animation: popping 0.25s ease-in-out infinite alternate;
+}
+@-webkit-keyframes popping {
+  to {
+    top: -24px;
+  }
+}
+@keyframes popping {
+  to {
+    top: -24px;
+  }
+}
+
+body #loader .wrap span:nth-of-type(1) {
+  transform: rotate(36deg);
+  -webkit-animation-delay: -0.0625s;
+  animation-delay: -0.0625s;
+}
+body #loader .wrap span:nth-of-type(2) {
+  transform: rotate(72deg);
+  -webkit-animation-delay: -0.125s;
+  animation-delay: -0.125s;
+}
+body #loader .wrap span:nth-of-type(3) {
+  transform: rotate(108deg);
+  -webkit-animation-delay: -0.1875s;
+  animation-delay: -0.1875s;
+}
+body #loader .wrap span:nth-of-type(4) {
+  transform: rotate(144deg);
+  -webkit-animation-delay: -0.25s;
+  animation-delay: -0.25s;
+}
+body #loader .wrap span:nth-of-type(5) {
+  transform: rotate(180deg);
+  -webkit-animation-delay: -0.3125s;
+  animation-delay: -0.3125s;
+}
+body #loader .wrap span:nth-of-type(6) {
+  transform: rotate(216deg);
+  -webkit-animation-delay: -0.375s;
+  animation-delay: -0.375s;
+}
+body #loader .wrap span:nth-of-type(7) {
+  transform: rotate(252deg);
+  -webkit-animation-delay: -0.4375s;
+  animation-delay: -0.4375s;
+}
+body #loader .wrap span:nth-of-type(8) {
+  transform: rotate(288deg);
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+body #loader .wrap span:nth-of-type(9) {
+  transform: rotate(324deg);
+  -webkit-animation-delay: -0.5625s;
+  animation-delay: -0.5625s;
+}
+body #loader .wrap span:nth-of-type(10) {
+  transform: rotate(360deg);
+  -webkit-animation-delay: -0.625s;
+  animation-delay: -0.625s;
+}
+
+body #loader .wrap span:nth-of-type(11) {
+  position: absolute;
+  top: 50%;
+  left: -80%;
+  -webkit-animation-delay: -0.625s;
+  animation-delay: -0.625s;
+}
+
+body.loaded {
+  pointer-events: all;
+}
+body.loaded #social a:nth-of-type(1n) svg {
+  transform: translateX(0);
+  transition-delay: 0s, 2.4s;
+}
+body.loaded #social a:last-of-type svg {
+  transition-delay: 0s, 2.6s;
+}
+body.loaded #loader {
+  transform: scaleY(0);
+  color: transparent;
+}
+body.loaded #loader .wrap {
+  opacity: 0;
+  -webkit-animation-iteration-count: 4;
+  animation-iteration-count: 4;
+}
+body.loaded #loader .wrap span {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+body.loaded #wrap {
+  transform: translateX(0%);
+  background: #eeece5;
+}
+body.loaded #wrap p.subhead {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 2s;
+}
+body.loaded #wrap .panel {
+  opacity: 1;
+  transition-delay: 1.75s;
+}
+body.loaded #wrap .panel:before {
+  opacity: 0.15;
+  transition-delay: 2.5s;
+}
+body.loaded #wrap h1 {
+  transition-delay: 1.75s;
+  transform: scaleX(1);
+}
+body.loaded #wrap h1 span.word:before {
+  transform: translate(-50%, -50%);
+  background-position: 50% 0%;
+  transition-delay: 2s, 2s;
+}
+body.loaded::-webkit-scrollbar {
+  background: #a58725;
+  width: 5px;
+}
+
+/* 社交帳號 */
+body #social {
+  z-index: 97;
+  position: fixed;
+  left: 2rem;
+  box-sizing: border-box;
+  top: 10px;
+  /* width: 100px; */
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  /* position: absolute;
+  -webkit-animation: popping 0.25s ease-in-out infinite alternate;
+  animation: popping 0.25s ease-in-out 10 alternate; */
+}
+
+body #social a:last-of-type svg {
+  transform: translateY(-150px);
+}
+
+body #social a:hover svg {
+  transform: scale(0.9);
+}
+body #social a:hover svg path {
+  fill: rgb(213, 215, 50);
+}
+
+body #social a:first-of-type svg {
+  transform: translateX(-2000px);
+}
+
+body #social svg {
+  padding: 2.4rem;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  transition: 0.2s ease-in-out, transform 0.6s cubic-bezier(1, 0.885, 0.32, 1),
+    transition 0.9s cubic-bezier(1, 0.885, 0.32, 1);
+  transform: translateX(-200px);
+}
+
+body #social svg path {
+  fill: #a58725;
+  transition: 0.2s ease-in-out;
+}
+
+/* 滾動條外觀 */
+body.loaded::-webkit-scrollbar {
+  background: rgb(176, 176, 45);
+  width: 5px;
+}
+body::-webkit-scrollbar {
+  background: #c6f040;
+  width: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #c6f040;
+}
