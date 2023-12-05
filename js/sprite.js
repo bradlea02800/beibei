@@ -77,7 +77,7 @@ for (let i = 0; i < cards.length; i++) {
       // iframe.setAttribute("src", frames[i]);
       // let penDebug = frames[i];
       // let penFull = penDebug.replace("debug", "pen");
-      penLink.setAttribute("href", penFull);
+      // penLink.setAttribute("href", penFull);
     }.bind(null, i)
   );
 }
