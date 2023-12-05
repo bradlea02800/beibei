@@ -34,8 +34,39 @@ body {
   margin: 0;
 }
 
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.heading-primary {
+  font-family: "Noto Serif TC", serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.05;
+  background-color: black;
+  color: #fff;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.heading-secondary {
+  font-family: "Noto Serif TC", serif;
+  font-weight: 700;
+  line-height: 2;
+  font-size: 3.6rem;
+  margin-bottom: 9.6rem;
+}
+
 /* *********************************************************** */
-/* 仔入畫面 */
+/* 載入畫面 */
 /* *********************************************************** */
 
 /* @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,700,900,300,200); */
@@ -706,7 +737,6 @@ body #frame .frame-container #penlink {
   transition: color 0.2s ease-in-out,
     transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition-delay: 0.2s;
-  letter-spacing: -2px;
   padding: 10px 15px;
   z-index: 9;
   transform-origin: 50% 12.5vh;
@@ -907,7 +937,7 @@ body #wrap {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   will-change: transform;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
   box-sizing: border-box;
 }
@@ -916,6 +946,7 @@ body #wrap h1 {
   text-align: center;
   font-family: "Bogart-Semibold";
   font-family: "Chakra Petch", sans-serif;
+  font-family: "Caveat", cursive;
   color: transparent;
   font-size: 10rem;
   position: relative;
@@ -940,7 +971,7 @@ body #wrap h1:after {
 }
 body #wrap h1:after {
   transform-origin: left;
-  background: rgb(208, 255, 39);
+  background: rgb(198, 210, 123);
   z-index: 3;
   transform: scaleX(calc(1 - (var(--progress) * 2)));
 }
@@ -1219,7 +1250,7 @@ body #wrap .panel h2 {
   font-family: "Noto Serif JP", serif;
   font-size: 6.4rem;
   position: relative;
-  z-index: 3;
+  z-index: 4;
   color: transparent;
   line-height: 1;
   pointer-events: none;
@@ -1397,13 +1428,14 @@ body #wrap .panel .thumb {
 body #wrap .panel .thumb p {
   position: absolute;
   width: 100%;
-  top: -30px;
+  top: -40px;
   margin: 0;
   color: #a58725;
   font-size: 12px;
   left: 0;
   text-align: center;
 }
+
 body #wrap .panel .thumb * {
   border-radius: 5px;
 }
@@ -1508,4 +1540,21 @@ body #wrap .panel .thumb img.light {
 body #wrap .panel .thumb img.lighter {
   filter: saturate(0) blur(calc(50px - (var(--progress) * 125px))) brightness(1)
     contrast(4);
+}
+
+/* 第一標題 */
+
+body #find {
+  background-image: url("../img/pixel/28_cookies.png");
+}
+
+/* 圖片 */
+
+.img-1 {
+  width: 50rem;
+  position: absolute;
+  top: -20%;
+  left: 0;
+  z-index: 3;
+  pointer-events: none;
 }

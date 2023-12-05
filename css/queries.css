@@ -1,7 +1,78 @@
+/* color*/
+/* 
+#F6F5A2
+#E1E089
+rgb(225, 224, 137)
+#C2C165
+#C6D27B
+rgb(198, 210, 123)
+#DAE591
+#A8B65A
+#89973C
+
+
+#EFEC4F
+#DBD836
+#448BA5
+#144A6A
+#04375A
+
+
+#80ffdb
+#72efdd
+#64dfdf
+#56cfe1
+#48bfe3
+#4ea8de
+#5390d9
+#5e60ce
+#6930c3
+#7400b8
+
+#FEC5BB
+#FCD5CE
+#FAE1DD
+#F8EDEB
+#E8E8E4
+#D8E2DC
+#ECE4DB
+#FFE5D9
+#FFD7BA
+#FEC89A
+
+#abc4ff
+#b6ccfe
+#c1d3fe
+#ccdbfd
+#d7e3fc
+#e2eafc
+#edf2fb
+
+#f0efeb
+#bee1e6
+#e2ece9
+
+#e9ff70
+*/
+
 @media (max-width: 38em) {
+  /*  */
+
+  body #social {
+    left: 0;
+  }
+
+  body #social svg {
+    padding: 1rem 0.75rem;
+  }
+
   body #wrap .panel h2 span.word {
     padding: 40px 0px;
     margin: -40px 0;
+  }
+
+  body #wrap .panel .thumb p {
+    top: -40px;
   }
 
   body #wrap .panel h2 {
@@ -14,5 +85,17 @@
 
   body #wrap h1 {
     font-size: 4.8rem;
+  }
+
+  .img-1 {
+    width: 35rem;
+    left: -30%;
+  }
+}
+
+@media (max-width: 22em) {
+  .img-1 {
+    width: 35rem;
+    left: -70%;
   }
 }
