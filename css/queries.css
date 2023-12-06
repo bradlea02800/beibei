@@ -128,7 +128,7 @@ rgb(198, 210, 123)
   }
 
   body #wrap h1 span.word {
-    transform: translateY(calc((var(--progress) * 450px) - 200px));
+    transform: translateY(calc((var(--progress) * 400px) - 200px));
   }
 
   body #find {
@@ -141,7 +141,7 @@ rgb(198, 210, 123)
   }
 
   body #wrap {
-    padding: 2.5vh 50px 6vh;
+    padding: 2.5vh 50px 8vh;
   }
 }
 
