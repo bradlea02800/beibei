@@ -1002,7 +1002,7 @@ body #wrap h1:after {
 body #wrap h1 span.word {
   position: relative;
   display: inline-block;
-  transform: translateY(calc((var(--progress) * 450px) - 200px));
+  transform: translateY(calc((var(--progress) * 570px) - 200px));
 }
 body #wrap h1 span.word:before {
   position: absolute;
@@ -1680,23 +1680,24 @@ body #wrap-1 {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   will-change: transform;
+  background: #f1f1f1;
   /* overflow: hidden; */
-  position: relative;
+  /* position: relative;
   box-sizing: border-box;
   background-image: url(../img/sky.jpg);
   background-attachment: fixed;
   background-size: 100%;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
-body #wrap-1 .ticket {
+/* body #wrap-1 .ticket {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: brightness(50%); /* 亮度效果 */
+  backdrop-filter: brightness(50%);
   -webkit-backdrop-filter: brightness(50%);
-  backdrop-filter: invert(10%) blur(10px) hue-rotate(320deg) sepia(90%); /* 色相旋轉 */
+  backdrop-filter: invert(10%) blur(10px) hue-rotate(320deg) sepia(90%); 
   -webkit-backdrop-filter: invert(70%) blur(10px) hue-rotate(320deg) sepia(90%);
-}
+} */
 
 i {
   opacity: 0;
@@ -1734,7 +1735,7 @@ h2 {
   width: 1.6rem;
   height: 1.6rem;
   border-radius: 1.6rem;
-  background-color: #000000;
+  background-color: #f1f1f1;
 }
 .container-1 .ticket-card:after {
   content: "";
@@ -1746,7 +1747,7 @@ h2 {
   width: 1.6rem;
   height: 1.6rem;
   border-radius: 1.6rem;
-  background-color: #000000;
+  background-color: #f1f1f1;
 }
 .container-1 .ticket-card ul {
   z-index: 99;

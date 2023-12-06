@@ -88,7 +88,14 @@ rgb(198, 210, 123)
   }
 
   body #wrap h1 span.word {
-    transform: translateY(calc((var(--progress) * 400px) - 200px));
+    transform: translateY(calc((var(--progress) * 520px) - 200px));
+  }
+  body #wrap .panel .thumb .house {
+    font-size: 8.2rem;
+  }
+
+  body #wrap .panel {
+    margin-bottom: 0;
   }
 
   .img-1 {
