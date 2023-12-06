@@ -150,7 +150,8 @@ gsap.to("body", {
     end: "50% 50%",
     scrub: 0,
     onUpdate: (self) => {
-      // body.style.setProperty("--progress", self.progress);
+      body.style.setProperty("--progress", self.progress);
+      console.log(self.progress);
     },
   },
 });

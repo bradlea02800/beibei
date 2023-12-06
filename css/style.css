@@ -71,7 +71,7 @@ body {
   font-weight: 700;
   line-height: 2;
   font-size: 3.6rem;
-  margin-bottom: 9.6rem;
+  margin-bottom: 4.8rem;
 }
 
 .subheading {
@@ -284,6 +284,7 @@ body.loaded #wrap p.subhead {
   transform: translateY(0);
   opacity: 1;
   transition-delay: 2s;
+  letter-spacing: 1rem;
 }
 body.loaded #wrap .panel {
   opacity: 1;
@@ -967,6 +968,7 @@ body #wrap h1 {
   font-family: "Bogart-Semibold";
   font-family: "Chakra Petch", sans-serif;
   font-family: "Caveat", cursive;
+  font-family: "Amatic SC", sans-serif;
   color: transparent;
   font-size: 10rem;
   position: relative;
@@ -998,7 +1000,7 @@ body #wrap h1:after {
 body #wrap h1 span.word {
   position: relative;
   display: inline-block;
-  transform: translateY(calc((var(--progress) * 1200px) - 200px));
+  transform: translateY(calc((var(--progress) * 450px) - 200px));
 }
 body #wrap h1 span.word:before {
   position: absolute;
@@ -1436,7 +1438,7 @@ body #wrap .panel:nth-of-type(even) .thumb p {
 body #wrap .panel .thumb {
   grid-area: 2/3/5/6;
   position: relative;
-  box-shadow: 0 0 0 2px #08350e;
+  box-shadow: 0 0 0 2px #448ba5;
   transition: box-shadow 0.3s ease-in-out;
   border-radius: 5px;
 }
@@ -1468,6 +1470,21 @@ body #wrap .panel .thumb .inner {
   overflow: hidden;
   z-index: 0;
 }
+
+body #wrap .panel .thumb .about {
+  position: absolute;
+  font-size: 4.8rem;
+  top: 70%;
+  left: 20%;
+  color: #e5eeeb;
+  font-family: "Amatic SC", sans-serif;
+}
+
+body #wrap .panel .thumb:hover .about {
+  color: #ffffff;
+  text-shadow: 1px 1px 10px #00ffae;
+}
+
 body #wrap .panel .thumb .inner:before,
 body #wrap .panel .thumb .inner:after {
   content: "";
@@ -1476,7 +1493,7 @@ body #wrap .panel .thumb .inner:after {
   height: 100%;
   top: 0;
   left: 0;
-  background: #a58725;
+  background: #bee1e6;
   mix-blend-mode: lighten;
   opacity: 0.5;
   z-index: 2;
@@ -1486,12 +1503,37 @@ body #wrap .panel .thumb .inner:after {
   opacity: 1;
   z-index: -2;
   mix-blend-mode: normal;
+  transition: all 0.5s;
 }
+
+body #wrap .panel .thumb:hover .inner:after {
+  background-color: #000000;
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.2) 33.33333%,
+      rgba(255, 255, 255, 0.4) 33.33333%,
+      rgba(255, 255, 255, 0.4) 66.66666%,
+      rgba(255, 255, 255, 0.6) 66.66666%
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 0.7) 33.33333%,
+      rgba(0, 255, 0, 0.7) 33.33333%,
+      rgba(0, 255, 0, 0.7) 66.66666%,
+      rgba(0, 0, 255, 0.7) 66.66666%
+    );
+  background-size: 3px 3px;
+  mix-blend-mode: multiply;
+}
+
 body #wrap .panel .thumb:hover:before {
+  content: "ABOUT";
+  background: #b6ccfe;
   transform: translate(-5%, -5%);
-  box-shadow: 0 0 0 2px rgb(137, 165, 37), 0 0 0 6px #eeece5, 0 0 0 8px #01fedc;
+  box-shadow: 0 0 0 2px #bee1e6, 0 0 0 6px #eeece5, 0 0 0 8px #01fedc;
   transition-delay: 0s, 0.2s;
 }
+
 body #wrap .panel .thumb:before {
   content: "";
   position: absolute;
@@ -1499,7 +1541,7 @@ body #wrap .panel .thumb:before {
   height: 100%;
   left: 5%;
   top: 5%;
-  box-shadow: 0 0 0 2px rgb(137, 165, 37), 0 0 0 0 #eeece5, 0 0 0 0 #01fedc;
+  box-shadow: 0 0 0 2px #abc4ff, 0 0 0 0 #eeece5, 0 0 0 0 #01fedc;
   transition: transform 0.2s cubic-bezier(1, 0.885, 0.32, 1),
     box-shadow 0.2s cubic-bezier(1, 0.885, 0.32, 1);
   transition-delay: 0.2s, 0s;
@@ -1571,10 +1613,11 @@ body #wrap .panel .thumb img.lighter {
 .img-1 {
   width: 50rem;
   position: absolute;
-  top: -20%;
+  top: -10%;
   left: 0;
   z-index: 3;
   pointer-events: none;
+  transform: translateY(calc(250px - (var(--progress) * 450px)));
 }
 
 body #wrap .title {
@@ -1583,11 +1626,15 @@ body #wrap .title {
 
 body #find {
   background-image: url("../img/beisnow-1.jpg");
+  max-width: 85vw;
+  width: 1000px;
+  padding-bottom: 1vh;
   /* background: var(--bgColor); */
   background-attachment: fixed;
-  background-size: cover;
+  background-size: 70%;
   background-repeat: no-repeat;
-  background-position: 20% 40%;
+  background-position: 55% 40%;
+  box-sizing: border-box;
 }
 
 /* ************************************************** */

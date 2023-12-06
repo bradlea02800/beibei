@@ -91,6 +91,7 @@ rgb(198, 210, 123)
     width: 35rem;
     top: -10%;
     left: -30%;
+    transform: translateY(calc(250px - (var(--progress) * 450px)));
   }
 
   .container-1 .ticket-card {
@@ -125,11 +126,20 @@ rgb(198, 210, 123)
     right: 6.5rem;
     font-size: 3rem;
   }
+
+  body #wrap h1 span.word {
+    transform: translateY(calc((var(--progress) * 450px) - 200px));
+  }
 }
 
 @media (max-width: 22em) {
   .img-1 {
-    width: 35rem;
-    left: -70%;
+    width: 30rem;
+    top: -5%;
+    left: -52%;
+  }
+
+  body #wrap h1 {
+    font-size: 3.8rem;
   }
 }
