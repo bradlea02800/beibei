@@ -130,13 +130,26 @@ rgb(198, 210, 123)
   body #wrap h1 span.word {
     transform: translateY(calc((var(--progress) * 450px) - 200px));
   }
+
+  body #find {
+    background-size: 150%;
+    /* transform: translateY(calc((var(--progress) * 250px) - 200px)); */
+  }
+
+  .heading-secondary {
+    margin-bottom: 2.4rem;
+  }
+
+  body #wrap {
+    padding: 2.5vh 50px 6vh;
+  }
 }
 
-@media (max-width: 22em) {
+@media (max-width: 25em) {
   .img-1 {
     width: 30rem;
-    top: -5%;
-    left: -52%;
+    top: 0;
+    left: -38%;
   }
 
   body #wrap h1 {
