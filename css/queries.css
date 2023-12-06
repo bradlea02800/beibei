@@ -89,7 +89,41 @@ rgb(198, 210, 123)
 
   .img-1 {
     width: 35rem;
+    top: -10%;
     left: -30%;
+  }
+
+  .container-1 .ticket-card {
+    width: 25rem;
+    height: 10rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .container-1 .ticket-card .pic {
+    width: 20rem;
+    height: 10rem;
+  }
+
+  .container-1 .ticket-card .ticket-social {
+    left: 3rem;
+    width: 9rem;
+    height: 3.2rem;
+    border-radius: 4rem;
+  }
+
+  .container-1 .ticket-card:after,
+  .container-1 .ticket-card:before {
+    bottom: -0.5rem;
+    left: 1.6rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 0.8rem;
+    background-color: #e6e5e1;
+  }
+
+  .container-1 .ticket-card h2 {
+    right: 6.5rem;
+    font-size: 3rem;
   }
 }
 

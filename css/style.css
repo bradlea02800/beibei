@@ -41,6 +41,15 @@ body {
   margin: 0 auto;
 }
 
+.container-1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .text-center {
   text-align: center;
 }
@@ -63,6 +72,17 @@ body {
   line-height: 2;
   font-size: 3.6rem;
   margin-bottom: 9.6rem;
+}
+
+.subheading {
+  font-family: "Noto Serif TC", serif;
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5rem;
+  margin-bottom: 1.2rem;
+  padding-top: 1rem;
 }
 
 /* *********************************************************** */
@@ -1544,11 +1564,9 @@ body #wrap .panel .thumb img.lighter {
 
 /* 第一標題 */
 
-body #find {
-  background-image: url("../img/pixel/28_cookies.png");
-}
-
+/* ************************************************** */
 /* 圖片 */
+/* ************************************************** */
 
 .img-1 {
   width: 50rem;
@@ -1557,4 +1575,198 @@ body #find {
   left: 0;
   z-index: 3;
   pointer-events: none;
+}
+
+body #wrap .title {
+  position: relative;
+}
+
+body #find {
+  background-image: url("../img/beisnow-1.jpg");
+  /* background: var(--bgColor); */
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 20% 40%;
+}
+
+/* ************************************************** */
+/* ticket */
+/* ************************************************** */
+
+i {
+  opacity: 0;
+  font-size: 18px;
+  color: #fff;
+  will-change: transform;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+h2 {
+  pointer-events: none;
+}
+
+.container-1 .ticket-card {
+  position: relative;
+  width: 50rem;
+  height: 20rem;
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 0.4rem;
+}
+.container-1 .ticket-card:before {
+  content: "";
+  z-index: 99;
+  position: absolute;
+  top: -1rem;
+  left: 3.2rem;
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 1.6rem;
+  background-color: #e6e5e1;
+}
+.container-1 .ticket-card:after {
+  content: "";
+  z-index: 99;
+  position: absolute;
+  bottom: -1rem;
+  left: 3.2rem;
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 1.6rem;
+  background-color: #e6e5e1;
+}
+.container-1 .ticket-card ul {
+  z-index: 99;
+  position: absolute;
+  left: 3.9rem;
+  top: 0.5rem;
+  list-style-type: none;
+}
+.container-1 .ticket-card ul li {
+  width: 0.2rem;
+  height: 0.2rem;
+  border-radius: 0.2rem;
+  margin: 0.6rem 0;
+  background-color: #e6e5e1;
+}
+.container-1 .ticket-card h2 {
+  z-index: 99;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  bottom: 0;
+  right: 13rem;
+  font-size: 6rem;
+  font-weight: 700;
+  color: #fff;
+}
+.container-1 .ticket-card .fa-arrow-right {
+  z-index: 100;
+  position: absolute;
+  right: 7.5rem;
+  bottom: 2.5rem;
+  font-size: 4rem;
+  cursor: pointer;
+}
+.container-1 .ticket-card p {
+  z-index: 99;
+  position: absolute;
+  top: 2rem;
+  right: 7rem;
+  color: #333;
+  opacity: 0.7;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  writing-mode: vertical-lr;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.container-1 .ticket-card .pic {
+  z-index: 100;
+  width: 40rem;
+  height: 20rem;
+  background-image: url("https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80");
+  background-size: 100% 100%;
+  filter: grayscale(100%);
+}
+.container-1 .ticket-card .ticket-social {
+  position: absolute;
+  left: 6rem;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 18rem;
+  height: 6.4rem;
+  border-radius: 8rem;
+}
+.container-1 .ticket-card .ticket-social i:nth-of-type(1) {
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+.container-1 .ticket-card .ticket-social i:nth-of-type(2) {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.container-1 .ticket-card .ticket-social i:nth-of-type(3) {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.container-1 .ticket-card .ticket-social i:nth-of-type(4) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+.container-1 .ticket-card:hover i {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.container-1 .ticket-card button {
+  position: absolute;
+  right: 1.4rem;
+  bottom: 1.4rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #da4d1d;
+  border: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  mix-blend-mode: hard-light;
+}
+.container-1 .ticket-card button i {
+  font-size: 3rem;
+}
+.container-1 .ticket-card:hover button {
+  transform: scale(16.5);
+}
+.container-1 .ticket-card:hover p {
+  color: #fff;
+}
+.container-1 .ticket-card:hover .pic {
+  filter: grayscale(0);
+}
+.container-1 .ticket-card2 .pic {
+  background-image: url("https://images.unsplash.com/photo-1528785198459-ec50485704c7?ixlib=rb-0.3.5&s=3a2fc3039516555bbb2e9cd2967bd321&auto=format&fit=crop&w=1537&q=80");
+}
+.container-1 .ticket-card2 button {
+  background-color: #2b26c3;
+}
+
+.dr {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 100px;
 }
