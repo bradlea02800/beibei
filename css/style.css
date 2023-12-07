@@ -116,7 +116,7 @@ body::after {
   background-size: 3px 3px;
   mix-blend-mode: multiply;
   z-index: -2;
-  height: 400%;
+  height: 600%;
 }
 
 body {
@@ -421,7 +421,7 @@ body.active {
 }
 
 body .active strong.circle span.word span.char {
-  color: #000;
+  color: #222372;
   transition: all 1s;
   text-shadow: 2px 0 rgba(246, 192, 249, 0.9), -2px 0 rgba(237, 255, 253, 0.9);
 }
@@ -908,7 +908,7 @@ body #cursor:after {
   transform: scaleY(0) rotate(0deg);
   z-index: 9;
 }
-body #cursor.linkhover {
+body #cursor.link:hover {
   border-color: transparent;
   border-width: 4px;
   box-shadow: 0 0 0 2px rgb(203, 254, 1);
@@ -1002,7 +1002,7 @@ body #wrap h1:after {
 body #wrap h1 span.word {
   position: relative;
   display: inline-block;
-  transform: translateY(calc((var(--progress) * 570px) - 200px));
+  transform: translateY(calc((var(--progress) * 600px) - 200px));
 }
 body #wrap h1 span.word:before {
   position: absolute;
@@ -1496,13 +1496,13 @@ body #wrap .panel .thumb .inner:after {
   height: 100%;
   top: 0;
   left: 0;
-  background: #bee1e6;
+  /* background: #bee1e6; */
   mix-blend-mode: lighten;
   opacity: 0.5;
   z-index: 2;
 }
 body #wrap .panel .thumb .inner:after {
-  background: #eeece5;
+  /* background: #eeece5; */
   opacity: 1;
   z-index: -2;
   mix-blend-mode: normal;
@@ -1548,7 +1548,7 @@ body #wrap .panel .thumb:before {
   transition: transform 0.2s cubic-bezier(1, 0.885, 0.32, 1),
     box-shadow 0.2s cubic-bezier(1, 0.885, 0.32, 1);
   transition-delay: 0.2s, 0s;
-  background: radial-gradient(
+  /* background: radial-gradient(
         circle at center,
         #e6a8e9 1px,
         rgba(255, 255, 255, 0.005) 1px,
@@ -1561,7 +1561,7 @@ body #wrap .panel .thumb:before {
         rgba(255, 255, 255, 0.005) 1px,
         rgba(255, 255, 255, 0.005) 20px
       )
-      10px 10px/20px 20px;
+      10px 10px/20px 20px; */
   border-radius: 5px;
 }
 body #wrap .panel .thumb:after {
@@ -1623,6 +1623,18 @@ body #wrap .panel .thumb img.lighter {
   transform: translateY(calc(250px - (var(--progress) * 450px)));
 }
 
+.img-1-1 {
+  width: 55rem;
+  position: absolute;
+  top: -40%;
+  left: -5%;
+  z-index: 3;
+  pointer-events: none;
+  transform: translateY(calc(250px - (var(--progress) * 300px)));
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+
 .img-2 {
   position: absolute;
   top: 75%;
@@ -1631,6 +1643,21 @@ body #wrap .panel .thumb img.lighter {
   pointer-events: none;
   /* backdrop-filter: ; */
   /* transform: translateY(calc(250px - (var(--progress) * 450px))); */
+}
+
+.ticket {
+  padding-bottom: 40.6rem;
+  overflow: hidden;
+}
+
+.img-back-2 {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 200%;
+  pointer-events: none;
+  transform: translateY(calc(250px - (var(--progress) * 700px)));
+  overflow: hidden;
 }
 
 body #wrap .panel .thumb .house {
@@ -1682,7 +1709,7 @@ body #wrap-1 {
   backface-visibility: hidden;
   will-change: transform;
   background: #f1f1f1;
-  /* overflow: hidden; */
+  overflow: hidden;
   /* position: relative;
   box-sizing: border-box;
   background-image: url(../img/sky.jpg);

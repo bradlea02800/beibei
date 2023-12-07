@@ -141,6 +141,20 @@ gsap.utils.toArray(".panel").forEach((section, index) => {
   });
 });
 
+gsap.utils.toArray(".ticket").forEach((section, index) => {
+  gsap.to(this, {
+    scrollTrigger: {
+      trigger: section,
+      start: "top 100%",
+      end: "bottom 25%",
+      scrub: 0,
+      onUpdate: (self) => {
+        section.style.setProperty("--progress", self.progress);
+      },
+    },
+  });
+});
+
 // Full page scroll progress
 // 為整個頁面的滾動進度創建滾動觸發器
 gsap.to("body", {

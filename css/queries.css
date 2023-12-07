@@ -58,6 +58,10 @@ rgb(198, 210, 123)
 @media (max-width: 38em) {
   /*  */
 
+  body:hover #cursor {
+    opacity: 0;
+  }
+
   body #social {
     left: 0;
   }
@@ -88,7 +92,7 @@ rgb(198, 210, 123)
   }
 
   body #wrap h1 span.word {
-    transform: translateY(calc((var(--progress) * 520px) - 200px));
+    transform: translateY(calc((var(--progress) * 580px) - 200px));
   }
   body #wrap .panel .thumb .house {
     font-size: 8.2rem;
@@ -103,6 +107,13 @@ rgb(198, 210, 123)
     top: -10%;
     left: -30%;
     transform: translateY(calc(250px - (var(--progress) * 450px)));
+  }
+
+  .img-1-1 {
+    width: 30rem;
+    top: -25%;
+    left: -40%;
+    transform: translateY(calc(250px - (var(--progress) * 300px)));
   }
 
   .container-1 .ticket-card {
@@ -234,6 +245,20 @@ rgb(198, 210, 123)
   .menu__item--doner:focus .line:nth-child(3) {
     transform: rotate(-45deg) translate(12.5px, -7px);
   }
+
+  .ticket {
+    padding-bottom: 19rem;
+    overflow: hidden;
+  }
+
+  .img-back-2 {
+    top: 50%;
+    transform: translateY(calc(250px - (var(--progress) * 400px)));
+  }
+
+  body #wrap .panel:nth-of-type(even) h2 {
+    grid-area: 3/3/4/6;
+  }
 }
 
 @media (max-width: 25em) {
@@ -244,10 +269,14 @@ rgb(198, 210, 123)
   }
 
   body #wrap h1 {
-    font-size: 4.2rem;
+    font-size: 4rem;
   }
 
   body #wrap p.subhead {
     font-size: 1.2rem;
+  }
+
+  body #wrap .panel .thumb .house {
+    font-size: 6.2rem;
   }
 }
